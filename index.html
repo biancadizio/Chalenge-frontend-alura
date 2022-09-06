@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="main-container">
+        <header class="cabecalho">
+            <img id="logo-alura"src="images/Vector.png" alt="logo alura">
+            <h1>Mensagens Codificadas</h1>
+        </header>
+        <div class="container-input">
+            <div class="input">
+                <textarea name="" id="input-texto" placeholder="Digite seu texto" cols="30" rows="10"></textarea>
+                
+            </div>
+            
+            <div id="output">
+                <img src="images/High quality products 1 1.png" alt="imagem menino">
+                <h5>Nenhuma mensagem encontrada</h5>
+                <span>Digite um texto que deseja criptografar ou descriptografar</span>
+            </div>
+        </div>
+        <p><img src="images/Vector (1).png" alt=""> Apenas letras minúsculas e sem acento.</p>
+        <div class="buttons">
+            <div class="container-btn">
+                <button onclick="criptografar()" class="btn-criptografar">Criptografar</button>
+                <button onclick="descriptografar()" class="btn-descriptografar">Descriptografar</button>
+            </div>
+        </div>
+    </main>
+   
+
+
+    <script>
+        var textInput = document.querySelector("#input-texto");
+        var outInput = document.querySelector("#output");
+
+
+        function criptografar() {
+            var texto = textInput.value;
+
+            var resultCripto = texto.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
+
+            document.getElementById('output').innerHTML = '<textarea readonly id"input-texto">' + resultCripto + '</textarea>' + '<buttom class="btn-copiar" id ="copiar" onclick="copiar()"><strong>Copiar</strong></button>'
+
+        }
+
+        function descriptografar() {
+
+            var texto = textInput.value;
+
+            var resultDescripto = texto.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
+
+            document.getElementById('output').innerHTML = '<textarea readonly id"input-texto">' + resultDescripto + '</textarea>' + '<buttom class="btn-copiar" id ="copiar" onclick="copiar()"><strong>Copiar</strong></button>'
+
+        }
+
+        function copiar() {
+
+            var textoCop = document.getElementById('input-texto');
+
+            textoCop.select();
+            document.execCommand('copy');
+            alert("Texto copiado");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
