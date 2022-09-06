@@ -1,5 +1,6 @@
 # Chalenge-frontend-alura
-Encriptador de textos desenvolvido em HTML, CSS e Javascript
+Encriptador de textos desenvolvido em HTML, CSS e Javascript.
+
 Na imagem abaixo pode-se ver o layout do encriptador, com dois containers, um ao lado do outro, no qual o container esquerdo recebe o texto, e o container direito, após o uso do botão criptografar, recebe o texto criptografado.
 <img src="https://github.com/biancadizio/Chalenge-frontend-alura/blob/master/img/page1.png?raw=true" height="500" width="1100">
 
